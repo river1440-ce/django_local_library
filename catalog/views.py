@@ -24,18 +24,18 @@ def index(request):
     request.session['num_visits'] = num_visits + 1
 
     # Looking for specific word in genres
-    word_in_genre = Genre.objects.get(name__icontains='economy')
+    # word_in_genre = Genre.objects.get(name__icontains='economy')
 
     # Looking for specific word in books
-    word_in_books = Book.objects.get(title__icontains='catch')
+    # word_in_books = Book.objects.get(title__icontains='catch')
 
     context = {
         'num_books': num_books,
         'num_instances': num_instances,
         'num_instances_available': num_instances_available,
         'num_authors': num_authors,
-        'word_in_genre': word_in_genre,
-        'word_in_books': word_in_books,
+        #'word_in_genre': word_in_genre,
+        #'word_in_books': word_in_books,
     }
 
     # Render the HTML template index.html with the data in the context variable
